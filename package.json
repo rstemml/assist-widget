@@ -1,0 +1,19 @@
+{
+  "name": "assist-widget",
+  "version": "1.0.0",
+  "private": true,
+  "description": "AI Chat Widget with Azure AI Foundry Backend",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "dev:widget": "npm run dev --workspace=packages/widget",
+    "dev:backend": "npm run dev --workspace=packages/backend",
+    "build:widget": "npm run build --workspace=packages/widget",
+    "build:backend": "npm run build --workspace=packages/backend",
+    "build": "npm run build:widget && npm run build:backend"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.3"
+  }
+}

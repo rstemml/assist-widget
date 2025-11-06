@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assist Widget Demo - Default</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            background: white;
+            border-radius: 20px;
+            padding: 60px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        .demo-info {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .demo-info h3 {
+            margin-bottom: 10px;
+            color: #0066cc;
+        }
+
+        .demo-info code {
+            background: #e9ecef;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+        }
+
+        .examples-list {
+            margin-top: 30px;
+        }
+
+        .examples-list a {
+            display: block;
+            padding: 15px;
+            background: #667eea;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            transition: transform 0.2s;
+        }
+
+        .examples-list a:hover {
+            transform: translateX(5px);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 Assist Chat Widget</h1>
+        <p>
+            Willkommen zur Demo des Assist Chat Widgets!
+            Dieses Widget kann auf jeder Webseite eingebunden werden und bietet
+            KI-gestützten Chat-Support für Ihre Kunden.
+        </p>
+
+        <div class="demo-info">
+            <h3>Aktuelle Konfiguration:</h3>
+            <p><strong>Customer ID:</strong> <code>default</code></p>
+            <p><strong>Position:</strong> Unten rechts</p>
+            <p><strong>Auto-Open:</strong> Nein</p>
+            <p>Klicken Sie auf das Chat-Icon unten rechts, um das Widget zu öffnen!</p>
+        </div>
+
+        <div class="demo-info">
+            <h3>Einbindung:</h3>
+            <p>So einfach binden Sie das Widget auf Ihrer Webseite ein:</p>
+            <pre><code>&lt;script
+  src="http://localhost:3000/widget.js"
+  data-customer-id="default"
+  data-server-url="ws://localhost:3000/chat"
+&gt;&lt;/script&gt;</code></pre>
+        </div>
+
+        <div class="examples-list">
+            <h3>Weitere Beispiele:</h3>
+            <a href="kunde-123.html">Kunde-123 (Purple Theme, Auto-Open)</a>
+            <a href="demo-kunde.html">Demo-Kunde (Green Theme, Bottom Left)</a>
+        </div>
+    </div>
+
+    <!-- Widget Integration -->
+    <script
+        src="../packages/widget/dist/widget.js"
+        data-customer-id="default"
+        data-server-url="ws://localhost:3000/chat"
+    ></script>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assist Widget Demo - Demo Kunde</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(135deg, #48BB78 0%, #38A169 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            background: white;
+            border-radius: 20px;
+            padding: 60px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #48BB78;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        .demo-info {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .demo-info h3 {
+            margin-bottom: 10px;
+            color: #48BB78;
+        }
+
+        .demo-info code {
+            background: #e9ecef;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+        }
+
+        .back-link {
+            display: inline-block;
+            padding: 15px 30px;
+            background: #48BB78;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: transform 0.2s;
+            margin-top: 20px;
+        }
+
+        .back-link:hover {
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🌿 Demo Kunde</h1>
+        <p>
+            Dies ist die Demo-Kunde Konfiguration mit Green Theme und linker Positionierung.
+        </p>
+
+        <div class="demo-info">
+            <h3>Aktuelle Konfiguration:</h3>
+            <p><strong>Customer ID:</strong> <code>demo-kunde</code></p>
+            <p><strong>Theme:</strong> Green</p>
+            <p><strong>Position:</strong> Unten links</p>
+            <p><strong>Auto-Open:</strong> Nein</p>
+            <p><strong>Welcome Message:</strong> "Demo Chat - Stellen Sie mir eine Frage!"</p>
+        </div>
+
+        <div class="demo-info">
+            <h3>Features:</h3>
+            <ul style="margin-left: 20px; line-height: 1.8;">
+                <li>Custom Green Branding</li>
+                <li>Widget erscheint unten links</li>
+                <li>20 Nachrichten pro Minute erlaubt</li>
+                <li>Benachrichtigungen deaktiviert</li>
+                <li>Light Background Theme</li>
+            </ul>
+        </div>
+
+        <a href="index.html" class="back-link">← Zurück zur Übersicht</a>
+    </div>
+
+    <!-- Widget Integration -->
+    <script
+        src="../packages/widget/dist/widget.js"
+        data-customer-id="demo-kunde"
+        data-server-url="ws://localhost:3000/chat"
+    ></script>
+</body>
+</html>

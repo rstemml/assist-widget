@@ -1,0 +1,19 @@
+{
+  "name": "@assist-widget/widget",
+  "version": "1.0.0",
+  "description": "Lightweight AI Chat Widget",
+  "main": "dist/widget.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "dev": "esbuild src/index.ts --bundle --outfile=dist/widget.js --watch --sourcemap",
+    "build": "esbuild src/index.ts --bundle --outfile=dist/widget.js --minify --sourcemap && npm run build:types",
+    "build:types": "tsc --emitDeclarationOnly --outDir dist"
+  },
+  "devDependencies": {
+    "esbuild": "^0.19.11",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "@assist-widget/shared": "*"
+  }
+}
