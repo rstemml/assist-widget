@@ -2,6 +2,8 @@
 
 Ein leichtgewichtiges, konfigurierbares KI-Chat-Widget mit Azure AI Foundry Backend Integration.
 
+> **🎯 Neu hier?** → Lies die [**QUICKSTART.md**](QUICKSTART.md) für eine 3-Schritte-Anleitung!
+
 ## ✨ Features
 
 - **Web Components** - Perfekte Style-Isolation mit Shadow DOM
@@ -27,54 +29,23 @@ assist-widget/
 
 ## 🚀 Quick Start
 
-### 1. Installation
-
 ```bash
-# Dependencies installieren
+# 1. Dependencies installieren
 npm install
 
-# Shared types bauen
-npm run build --workspace=packages/shared
-```
-
-### 2. Backend Setup
-
-```bash
-# .env Datei erstellen
+# 2. Azure Credentials konfigurieren
 cp packages/backend/.env.example packages/backend/.env
+# → Öffne packages/backend/.env und füge Azure Credentials ein
 
-# .env ausfüllen mit Azure Credentials
-# AZURE_OPENAI_ENDPOINT=https://your-resource.openai.azure.com/
-# AZURE_OPENAI_API_KEY=your-api-key
-# AZURE_OPENAI_DEPLOYMENT=gpt-4
-
-# Backend starten
+# 3. Backend starten (Terminal 1)
 npm run dev:backend
+
+# 4. Demo starten (Terminal 2)
+npm run demo
+# → Öffne http://localhost:8080/examples/index.html
 ```
 
-### 3. Widget Build
-
-```bash
-# Widget bauen
-npm run build:widget
-
-# Oder im Dev-Modus (mit Watch)
-npm run dev:widget
-```
-
-### 4. Demo öffnen
-
-Öffne `examples/index.html` in deinem Browser (über einen lokalen Server):
-
-```bash
-# Mit Python
-python -m http.server 8080
-
-# Mit Node.js (http-server)
-npx http-server -p 8080
-```
-
-Dann öffne: `http://localhost:8080/examples/index.html`
+📖 **Detaillierte Anleitung & Troubleshooting:** Siehe [QUICKSTART.md](QUICKSTART.md)
 
 ## 🔧 Widget Integration
 
