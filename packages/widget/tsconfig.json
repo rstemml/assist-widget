@@ -1,12 +1,23 @@
 {
-  "extends": "../../tsconfig.json",
+  "extends": "@tsconfig/svelte/tsconfig.json",
   "compilerOptions": {
-    "outDir": "./dist",
+    "target": "ES2020",
+    "module": "ESNext",
     "lib": ["ES2020", "DOM"],
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "allowJs": true,
+    "checkJs": true,
+    "isolatedModules": true,
+    "outDir": "./dist",
     "baseUrl": ".",
     "paths": {
       "@assist-widget/shared": ["../shared/src"]
-    }
+    },
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true
   },
   "include": ["src/**/*", "../shared/src/**/*"],
   "exclude": ["node_modules", "dist"]

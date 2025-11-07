@@ -2,12 +2,15 @@
 
 Ein leichtgewichtiges, konfigurierbares KI-Chat-Widget mit Azure AI Foundry Backend Integration.
 
+**Built with Svelte** für beste Developer Experience und reaktive UI! 🎉
+
 > **🎯 Neu hier?** → Lies die [**QUICKSTART.md**](QUICKSTART.md) für eine 3-Schritte-Anleitung!
 
 ## ✨ Features
 
-- **Web Components** - Perfekte Style-Isolation mit Shadow DOM
-- **Leichtgewichtig** - ~15-20KB gzipped Bundle-Größe
+- **Svelte** - Moderne, reaktive UI mit hervorragender Developer Experience
+- **Web Components** - Custom Elements mit perfekter Style-Isolation
+- **Leichtgewichtig** - ~22KB minified (~8KB gzipped)
 - **Multi-Tenant** - Konfigurierbar für verschiedene Kunden
 - **Real-time** - WebSocket-basierte Kommunikation
 - **Rate Limiting** - Schutz gegen Flooding
@@ -21,7 +24,12 @@ Ein leichtgewichtiges, konfigurierbares KI-Chat-Widget mit Azure AI Foundry Back
 ```
 assist-widget/
 ├── packages/
-│   ├── widget/              # Frontend Widget (Vanilla TS + Web Components)
+│   ├── widget/              # Frontend Widget (Svelte + Custom Elements)
+│   │   ├── src/
+│   │   │   ├── components/  # Svelte Components
+│   │   │   ├── Widget.svelte
+│   │   │   └── index.ts
+│   │   └── vite.config.js   # Vite Build Config
 │   ├── backend/             # Backend API (Fastify + WebSocket)
 │   └── shared/              # Shared TypeScript Types
 └── examples/                # Demo HTML Seiten

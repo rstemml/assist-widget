@@ -1,7 +1,7 @@
-import { AssistChatWidget } from './core/widget';
+import './Widget.svelte';
 
 /**
- * Assist Chat Widget
+ * Assist Chat Widget (Svelte)
  *
  * Usage:
  * <script src="widget.js" data-customer-id="your-customer-id" data-server-url="wss://your-server.com/chat"></script>
@@ -34,20 +34,17 @@ import { AssistChatWidget } from './core/widget';
       return;
     }
 
-    // Create widget element
-    const widget = document.createElement('assist-chat-widget') as AssistChatWidget;
-    widget.setAttribute('data-customer-id', customerId);
+    // Create widget element (Svelte custom element)
+    const widget = document.createElement('assist-chat-widget');
+    widget.setAttribute('customer-id', customerId);
 
     if (serverUrl) {
-      widget.setAttribute('data-server-url', serverUrl);
+      widget.setAttribute('server-url', serverUrl);
     }
 
     // Append to body
     document.body.appendChild(widget);
 
-    console.log('[AssistWidget] Initialized successfully');
+    console.log('[AssistWidget] Initialized successfully (Svelte)');
   }
 })();
-
-// Export for potential programmatic usage
-export { AssistChatWidget };
